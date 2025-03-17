@@ -6,6 +6,10 @@ import ThemeToggle from "./theme-toggle";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
+// import logo from "@/public/images/Audi TT 2022 02.svg";
+// import Image from "next/image";
+// import IconPhone from "./ui/iconPhone";
+
 const SECTION_DATA = [
   { label: 1, href: "/", isFirst: true, isLast: false },
   { label: 2, href: "/page-2", isFirst: true, isLast: false },
@@ -37,17 +41,21 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div className="flex w-full items-center justify-between">
-        <Link
+       
+
+        {/* <Link href="/"><Image width={50} height={50} src={logo} alt="Man sitting in wheelchair" /></Link> */}
+        {/* <Link
           href="/"
-          className={`flex items-center text-2xl font-bold dark:text-white`}
+          className={`flex items-center mb-[2rem]  font-bold dark:text-white`}
         >
-          Kami.{" "}
+          <IconPhone size={18} />
+          +380 (93) 832-55-35{" "}
           <span
-            className={`name group ml-2 inline-block rounded-3xl bg-[#fafafa] px-3 text-sm font-bold text-black`}
+            className={`name group mt-2 inline-block rounded-3xl bg-[#fafafa] px-3 text-sm font-bold text-black`}
           >
-            <span className="">v3.2</span>
+            
           </span>
-        </Link>
+        </Link> */}
 
         <ThemeToggle />
       </div>

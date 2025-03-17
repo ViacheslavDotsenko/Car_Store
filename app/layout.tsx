@@ -4,6 +4,8 @@ import type { Metadata } from 'next/types'
 import localFont from "next/font/local";
 
 import { Provider } from "@/components/provider";
+import Header from "@/components/header/Header";
+import MenuNavigation from "@/components/menu/MenuNavigation";
 
 const spaceMono = localFont({
   src: [
@@ -89,8 +91,10 @@ export default function RootLayout({
       <body className={`${spaceMono.className}`}>
         <Provider attribute="class" defaultTheme="system" enableSystem>
           <main
-            className={`bg-white text-zinc-700 dark:bg-black dark:text-zinc-400`}
+            className={`text-zinc-700 bg-[#e0dede] dark:bg-[#393838] dark:text-zinc-400`}
           >
+            <Header/>
+            <MenuNavigation/>
             {children}
           </main>
         </Provider>
