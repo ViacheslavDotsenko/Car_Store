@@ -40,27 +40,9 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div className="flex w-full items-center justify-between">
-       
-
-        {/* <Link href="/"><Image width={50} height={50} src={logo} alt="Man sitting in wheelchair" /></Link> */}
-        {/* <Link
-          href="/"
-          className={`flex items-center mb-[2rem]  font-bold dark:text-white`}
-        >
-          <IconPhone size={18} />
-          +380 (93) 832-55-35{" "}
-          <span
-            className={`name group mt-2 inline-block rounded-3xl bg-[#fafafa] px-3 text-sm font-bold text-black`}
-          >
-            
-          </span>
-        </Link> */}
-
-        <ThemeToggle />
-      </div>
+      
       {children}
-      <div className="flex w-full items-center justify-between">
+      {/* <div className="flex w-full items-center justify-between">
         <Link href={previousPage as string} passHref>
           <Button
             disabled
@@ -88,7 +70,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
             <span className="">Next</span>
           </Button>
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }

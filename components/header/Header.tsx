@@ -6,6 +6,7 @@ import IconPhone from "../ui/phoneNumber/iconPhone";
 import logo from "@/public/images/Audi TT 2022 02.svg";
 import PhoneNumber from '../ui/phoneNumber/phoneNumber';
 import Basket from '../ui/basket';
+import ThemeToggle from '../theme-toggle';
 
 
 
@@ -20,7 +21,7 @@ return (<header className="flex w-full items-center justify-center p-[1rem] bg-[
         <PhoneNumber/>       
         </li>
         <li><Search/></li>
-        <li><Basket/></li>
+        <li className='flex gap-4'><ThemeToggle/><Basket/></li>
     </ul>
 </header>
  );

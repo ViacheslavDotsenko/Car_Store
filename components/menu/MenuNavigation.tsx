@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
+import Link from "next/link";
 
 const menuItems = [
-  'Головна',
-  'Товари та послуги',
-  'Про нас',
-  'Контакти',
-  'Доставка та оплата',
-  'Повернення та обмін',
+  { name: "Головна", href: "/" },
+  { name: "Товари та послуги", href: "/products" },
+  { name: "Про нас", href: "/about" },
+  { name: "Контакти", href: "/contact" },
+  { name: "Доставка та оплата", href: "/delivery" },
+  { name: "Повернення та обмін", href: "/returns" },
 ];
 
 const MenuNavigation: React.FC = () => {
@@ -18,7 +19,9 @@ const MenuNavigation: React.FC = () => {
             key={index}
             className="cursor-pointer h-full flex justify-center items-center whitespace-nowrap hover:bg-gray-400 dark:hover:bg-gray-800 px-4 transition duration-500"
           >
-            {item}
+            <Link href={item.href} className="h-full flex items-center">
+              {item.name}
+            </Link>
           </li>
         ))}
       </ul>

@@ -6,34 +6,30 @@ import localFont from "next/font/local";
 import { Provider } from "@/components/provider";
 import Header from "@/components/header/Header";
 import MenuNavigation from "@/components/menu/MenuNavigation";
+import Footer from "@/components/footer/Footer";
 
-const spaceMono = localFont({
+const oswald = localFont({
   src: [
     {
-      path: "../public/fonts/space-mono/SpaceMono-Regular.ttf",
+      path: "../public/fonts/oswald/Oswald-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/space-mono/SpaceMono-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../public/fonts/space-mono/SpaceMono-Bold.ttf",
-      weight: "700",
+      path: "../public/fonts/oswald/Oswald-Medium.ttf",
+      weight: "500",
       style: "normal",
     },
     {
-      path: "../public/fonts/space-mono/SpaceMono-BoldItalic.ttf",
+      path: "../public/fonts/oswald/Oswald-Bold.ttf",
       weight: "700",
-      style: "italic",
+      style: "normal",
     },
   ],
 });
 
 export const metadata: Metadata = {
-  title: "Kaminari",
+  title: "CarStore",
   generator: "Next.js",
   applicationName: "Kaminari",
   referrer: "origin-when-cross-origin",
@@ -56,18 +52,18 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://kaminari.vercel.app"),
   openGraph: {
-    title: "Kaminari",
+    title: "CarStore",
     description: "Next.js, TailwindCSS and shadcn-ui Starter Template",
     url: "https://kaminari.vercel.app",
-    siteName: "Kaminari",
+    siteName: "CarStore",
     images: [
       {
-        url: "https://kaminari.vercel.app/og.png",
+        url: "../public/images/psl_Logo.svg",
         width: 800,
         height: 600,
       },
       {
-        url: "https://kaminari.vercel.app/og-dark.png",
+        url: "../public/images/psl_Logo.svg",
         width: 1800,
         height: 1600,
         alt: "Next.js, TailwindCSS and shadcn-ui Starter Template",
@@ -88,14 +84,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceMono.className}`}>
+      <body className={`${oswald.className} min-h-screen flex flex-col`}>
         <Provider attribute="class" defaultTheme="system" enableSystem>
           <main
-            className={`text-zinc-700 bg-[#e0dede] dark:bg-[#393838] dark:text-zinc-400`}
+            className={`flex flex-col min-h-screen bg-[#e0dede] dark:bg-[#393838] dark:text-zinc-400 text-zinc-700`}
           >
             <Header/>
             <MenuNavigation/>
             {children}
+            <Footer/>
           </main>
         </Provider>
       </body>
